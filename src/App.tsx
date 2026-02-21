@@ -108,7 +108,7 @@ const App = () => {
         { path: 'cashbook', element: <TablePage title="Cashbook" rows={store.state.cashbook} /> },
         { path: 'owner-capital', element: <TablePage title="Owner Capital" rows={store.state.ownerCapital} /> },
         { path: 'evaluation', element: <Evaluation store={store} /> },
-        { path: 'data-view', element: <GuardOwner store={store}><TablePage title="Data View" rows={store.state} /></GuardOwner> }
+        { path: 'data-view', element: <GuardOwner store={store}><TablePage title="Data View" rows={store.state as unknown} /></GuardOwner> }
       ]
     }
   ]);

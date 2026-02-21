@@ -63,7 +63,7 @@ export const useAppStore = () => {
 
   const recordPayment = (clientId: string, amount: number, notes: string, recordedBy: string) => {
     const now = new Date();
-    setState((s) => {
+    setState((s): AppState => {
       const clients: Client[] = s.clients.map((c): Client => {
         if (c.id !== clientId) return c;
         const totalPaid = c.totalPaid + amount;
